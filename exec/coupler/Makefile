@@ -1,7 +1,7 @@
 # Makefile created by mkmf 2022.01.00
 
 CPPDEFS = -DINTERNAL_FILE_NML
-OTHERFLAGS = -I$(BUILDROOT)atmos_dyn -I$(BUILDROOT)ice_sis -I$(BUILDROOT)ice_param -I$(BUILDROOT)land_lad2 -I$(BUILDROOT)mom6 -I$(BUILDROOT)am5_phys -I$(BUILDROOT)fms
+OTHERFLAGS = -I$(BUILDROOT)atmos_dyn -I$(BUILDROOT)ice_sis -I$(BUILDROOT)ice_param -I$(BUILDROOT)land_lad2 -I$(BUILDROOT)mom6 -I$(BUILDROOT)atmos_phys -I$(BUILDROOT)fms
 include $(MK_TEMPLATE)
 
 
