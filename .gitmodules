@@ -1,0 +1,27 @@
+[submodule "src/FMS"]
+	path = src/FMS
+	url = https://github.com/NOAA-GFDL/FMS.git
+[submodule "src/atmos_drivers"]
+	path = src/atmos_drivers
+	url = https://github.com/NOAA-GFDL/atmos_drivers.git
+[submodule "src/FMScoupler"]
+	path = src/FMScoupler
+	url = https://github.com/NOAA-GFDL/FMScoupler.git
+[submodule "src/GFDL_atmos_cubed_sphere"]
+	path = src/GFDL_atmos_cubed_sphere
+	url = https://github.com/NOAA-GFDL/GFDL_atmos_cubed_sphere.git
+[submodule "src/ice_param"]
+	path = src/ice_param
+	url = https://github.com/NOAA-GFDL/ice_param.git
+[submodule "src/land_lad2"]
+	path = src/land_lad2
+	url = https://github.com/NOAA-GFDL/lm4.git
+[submodule "src/ocean_BGC"]
+	path = src/ocean_BGC
+	url = https://github.com/NOAA-GFDL/ocean_BGC.git
+[submodule "src/MOM6"]
+	path = src/MOM6
+	url = https://github.com/NOAA-GFDL/MOM6.git
+[submodule "src/atmos_phys"]
+	path = src/atmos_phys
+	url = https://github.com/NOAA-GFDL/atmos_phys.git
