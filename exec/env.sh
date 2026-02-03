@@ -10,6 +10,7 @@ module load intel-classic/2023.2.0
 module load cray-hdf5/1.12.2.11
 module load cray-netcdf/4.9.0.11
 module load libyaml/0.2.5
+module swap cray-libsci/24.11.0
 
 ulimit -s unlimited
 
