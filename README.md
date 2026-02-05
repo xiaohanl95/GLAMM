@@ -89,67 +89,13 @@ Once the environment and makefile templates are configured, run the build script
 **5. Verify Compilation**
 If the previous steps complete successfully, you will find the executable ```fms_am4_glamm.x``` located in the ```exec``` directory.
 
-6. 
-**5. Compilation Check**
-If all the previous steps are successful, you should be able to find the excuteble fms_am4_glamm.x under the folder ```exec```
-### Compilations
-Download the src code
-git clone --recursive https://github.com/xiaohanl95/GLAMM.git
-Set-up the environment
-vim exec/env.sh
-revise the enviroment for the compilation
-
-Set -up the template
-vim exec/intel-classic.mk
-revise the flag for FC, CC, LD for commends macros
-change LIBS := if needed 
-
-After all env.sh and intel-classic.mk get changed, 
-do
-./build_am4_glamm.sh 2>&1 | tee log.compile
+### Run Simulations
+**1. Obtain Input Data**
+Ensure all necessary input data files are downloaded and linked to the correct directory.
 
 
 
-### Directory Structure
-* `src/`: Source code for GLAMM and AM4 modifications.
-    * `atmos_param/aerosol_microphysics/`: Core GLAMM modules.
-* `run/`: Sample run scripts and namelists.
-* `input/`: [TODO: Link to input data or description of required files].
 
-### Compilation
-[TODO: Insert specific compilation steps here, e.g., using mkmf]
-```bash
-# Example
-cd exp/
-./compile_glamm.sh
-## Compiling the model:
-The script build_am4_glamm.sh can be run to compile the model.
-
-The script exec/env.sh should be updated to load the environment in your system.
-Libraries required:
-
-    NetCDF C and Fortran (77/90) headers and libraries
-    Fortran 2003 standard compiler
-    Fortran compiler that supports Cray Pointers
-    MPI C and Fortran headers and librarie
-
-The file exec/intel-classic.mk should be updated with the flags, based on your compiler
-
-## Getting input files:
-TODO
-
-## Running the model:
-The script c96L33_amip_glamm.sh can be used to run the model. It is currently set up to run with 384 nodes and 1 openmp threads, but the script has guidelines on how to update this.
-
-
-
-## 🚀 Usage
-
-### Requirements
-* **Host Model:** GFDL AM4.0.
-* **Input Data:**
-    * **Anthropogenic Emissions:** CEDS (Community Emissions Data System) for CMIP6.
-    * **Natural Emissions:** Online parameterizations for Sea Salt (Gong, 2003; Jaeglé et al., 2011) and Dust (Kok, 2011).
 
 ### Running the Model
 The model can be run in a "double-call" diagnostic configuration (as described in the Part 1 paper). In this setup:
