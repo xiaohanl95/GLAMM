@@ -89,9 +89,23 @@ Once the environment and makefile templates are configured, run the build script
 **5. Verify Compilation**
 If the previous steps complete successfully, you will find the executable ```fms_am4_glamm.x``` located in the ```exec``` directory.
 
-### Run Simulations
-**1. Obtain Input Data**
-Ensure all necessary input data files are downloaded and linked to the correct directory.
+### Obtain Input Data
+All necessary input data files can be downloaded by
+
+
+
+### Run the Model
+The current code can be run in a "double-call" diagnostic configuration (as described in the refered manuscript). 
+> In this setup:
+> 
+> 1. The standard AM4.0 bulk aerosol scheme remains active for radiative transfer and cloud microphysics.
+>
+> 2. GLAMM runs simultaneously as a passive tracer package, undergoing full microphysical processing without feeding back to the climate.
+>
+> This allows for direct evaluation of microphysical budgets without perturbing the host model's circulation.
+
+
+
 
 
 
