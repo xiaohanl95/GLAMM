@@ -65,68 +65,6 @@ This allows for direct evaluation of microphysical budgets without perturbing th
 
 *See `[TODO: Insert Path to Run Scripts]` for example namelists and run scripts.*
 
-## ✉️ Contact & Development
-
-**AM4-GLAMM was developed by Xiaohan Li.**
-
-For any questions regarding the code, model configuration, or usage, please contact the developer directly:
-
-**Xiaohan Li**
-* Email: **xiaohanl@princeton.edu**
-
-* 
-
-
-# AM4-GLAMM: GFDL's Aerosol Microphysics Model
-
-**AM4-GLAMM** is a newly developed modal aerosol microphysics scheme integrated into the GFDL AM4.0 model. Unlike the bulk aerosol schemes previously used in AM4.0, GLAMM employs a modal representation that explicitly tracks the evolution of aerosol mass, number concentration, and mixing state (internal and external) across multiple modes.
-
-This repository contains the source code for the GLAMM component and the necessary modifications to the AM4.0 host model.
-
-## 📄 Reference & Citation
-The full description of the model and its evaluation with observational constraints can be found in:
-
-> **The GFDL's Aerosol Microphysics Model (GLAMM) – Part 1: Model Description and Aerosol Evaluation with Observational Constraints**
->
-> **Authors:** Xiaohan Li¹, Fabien Paulot², Uriel Ramirez², Susanne E. Bauer³, Xiaohong Liu⁴, Paul Ginoux²
->
-> *¹ Atmospheric and Oceanic Sciences Program, Princeton University*
-> *² NOAA Geophysical Fluid Dynamics Laboratory*
-> *³ NASA Goddard Institute for Space Studies*
-> *⁴ Department of Atmospheric Sciences, Texas A&M University*
->
-> **Journal:** *Journal of Advances in Modeling Earth Systems (JAMES)*
-
-Please cite this paper if you use AM4-GLAMM in your research.
-
-## 🔬 Scientific Overview
-GLAMM provides a prognostic treatment of aerosol microphysical processes. It moves beyond the bulk method by independently tracking **Number ($N$)** and **Mass ($M$)** for each mode.
-
-### Key Capabilities
-* **Modal Representation:** Represents aerosols as overlapping subpopulations (modes) with log-normal distributions.
-* **Prognostic Mixing State:** Explicitly handles internal vs. external mixing and aging processes (e.g., hydrophobic to hydrophilic transition).
-* **Flexible Configuration:** Supports variable mode definitions, ranging from simplified setups (e.g., 3-mode) to the comprehensive 12-mode configuration used in the reference paper.
-
-### Microphysical Processes
-The model integrates parameterizations from MATRIX, MAM, and GFDL AM4.0, including:
-* **New Particle Formation (NPF):** Binary nucleation of $H_2SO_4-H_2O$ (Vehkamäki et al., 2002).
-* **Condensation:** Kinetic uptake of $H_2SO_4$ vapor.
-* **Coagulation:** Intra-mode (self) and inter-mode coagulation (Brownian, turbulent shear, gravitational collection, etc.).
-* **Aging (Intermodal Transfer):** Explicit transfer of hydrophobic cores (BC/OA) to hydrophilic modes upon acquiring sufficient sulfate coating ($>5\%$ mass fraction).
-* **Activation:** Physically based droplet activation (Abdul-Razzak and Ghan, 2000).
-* **Deposition:** Resistance-based dry deposition and size-resolved gravitational settling (sedimentation).
-
-## ⚙️ Default Configuration (12-Mode)
-The reference configuration utilizes **12 aerosol modes** to capture the full complexity of atmospheric aerosols.
-
-| Mode | Description | Tracers | $D_{g,emis}$ ($\mu m$) | $\sigma_g$ |
-| :--- | :--- | :--- | :--- | :--- |
-| **AKK** | Aitken mode sulfate | $N, M_{sulf}$ | 0.013 | 1.6 |
-| **ACC** | Accumulation mode sulfate | $N, M_{sulf}$ | 0.068 | 1.8 |
-| **DD1** | Accumulation mode dust | $N, M_{dust}, M_{sulf}$ | 0.58 | 1.8 |
-| **DD2** | Coarse mode dust |
-
-
 
 
 ## 🚀 Getting Started
