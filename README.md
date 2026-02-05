@@ -91,12 +91,15 @@ If the previous steps complete successfully, you will find the executable ```fms
 
 ### Obtain Input Data
 All necessary input data files can be downloaded by
-
+```bash
+wget ftp://nomads.gfdl.noaa.gov/users/Ming.Zhao/AM4Documentation/GFDL-AM4.0/inputData/AM4_run.tar.gz
+```
 
 
 ### Run the Model
-The current code can be run in a "double-call" diagnostic configuration (as described in the refered manuscript). 
-> In this setup:
+Once the input data is linked and the configuration is established, execute the model using the provided run script ```c96L33_amip_glamm.sh```.
+
+> The current code can be run in a "double-call" diagnostic configuration (as described in the refered manuscript). In this setup:
 > 
 > 1. The standard AM4.0 bulk aerosol scheme remains active for radiative transfer and cloud microphysics.
 >
