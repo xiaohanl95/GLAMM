@@ -21,7 +21,7 @@ GLAMM provides a prognostic treatment of aerosol microphysical processes. It mov
 * **Flexible Configuration:** Supports variable mode definitions, ranging from simplified setups (e.g., 3-mode) to the comprehensive 12-mode configuration used in the reference paper.
 
 ### Microphysical Processes
-The model integrates parameterizations from MATRIX, MAM, and GFDL AM4.0, including:
+The model integrates parameterizations including:
 * **New Particle Formation (NPF):** Binary nucleation of $H_2SO_4-H_2O$ (Vehkamäki et al., 2002).
 * **Condensation:** Kinetic uptake of $H_2SO_4$ vapor.
 * **Coagulation:** Intra-mode (self) and inter-mode coagulation (Brownian, turbulent shear, gravitational collection, etc.).
