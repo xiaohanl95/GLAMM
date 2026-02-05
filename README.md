@@ -98,7 +98,7 @@ Ensure all necessary input data files are downloaded and linked to the correct d
 
 
 ### Running the Model
-The model can be run in a "double-call" diagnostic configuration (as described in the Part 1 paper). In this setup:
+The current code can be run in a "double-call" diagnostic configuration (as described in the Part 1 paper). In this setup:
 1.  The standard AM4.0 bulk aerosol scheme remains active for radiative transfer and cloud microphysics.
 2.  GLAMM runs simultaneously as a passive tracer package, undergoing full microphysical processing without feeding back to the climate.
 This allows for direct evaluation of microphysical budgets without perturbing the host model's circulation.
