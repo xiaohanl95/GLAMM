@@ -61,7 +61,7 @@ The reference configuration utilizes **12 aerosol modes** to capture the full co
 **1. Get the Source Code**
 Clone the repository using the `--recursive` flag to ensure all submodules (including FMS) are downloaded correctly.
 ```bash
-git clone --recursive [https://github.com/xiaohanl95/GLAMM.git](https://github.com/xiaohanl95/GLAMM.git)
+git clone --recursive https://github.com/xiaohanl95/GLAMM.git
 ```
 **2. Configure the Environment**
 Navigate to the execution directory and customize the environment settings to match your cluster's modules and paths.
