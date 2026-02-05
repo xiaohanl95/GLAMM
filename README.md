@@ -56,6 +56,60 @@ The reference configuration utilizes **12 aerosol modes** to capture the full co
 * **Compiler:** Intel Fortran Compiler (ifort) or GNU Fortran (gfortran) with MPI support.
 * **NetCDF:** Libraries for input/output.
 
+### Installation & Compilation
+
+**1. Get the Source Code**
+Clone the repository using the `--recursive` flag to ensure all submodules (including FMS) are downloaded correctly.
+```bash
+git clone --recursive [https://github.com/xiaohanl95/GLAMM.git](https://github.com/xiaohanl95/GLAMM.git)
+```
+**2. Configure the Environment**
+Navigate to the execution directory and customize the environment settings to match your cluster's modules and paths.
+```bash
+cd GLAMM
+# Edit the environment setup script
+vim exec/env.sh
+```
+**3. Configure the Make Template**
+Edit the compiler template to set the correct flags and library paths for your system.
+```bash
+# Edit the makefile template
+vim exec/intel-classic.mk
+```
+> Compiler Flags: Update ```FC``` (Fortran), ```CC``` (C), and ```LD``` (Linker) macros as needed for your specific compiler version.
+>
+> Libraries: Update the ```LIBS :=``` path to point to your local NetCDF and MPI installations
+
+**4. Build the Model**
+Once the environment and makefile templates are configured, run the build script. We recommend piping the output to a log file to check for errors.
+```bash
+./build_am4_glamm.sh 2>&1 | tee log.compile
+```
+
+**5. Verify Compilation**
+If the previous steps complete successfully, you will find the executable ```fms_am4_glamm.x``` located in the ```exec``` directory.
+
+6. 
+**5. Compilation Check**
+If all the previous steps are successful, you should be able to find the excuteble fms_am4_glamm.x under the folder ```exec```
+### Compilations
+Download the src code
+git clone --recursive https://github.com/xiaohanl95/GLAMM.git
+Set-up the environment
+vim exec/env.sh
+revise the enviroment for the compilation
+
+Set -up the template
+vim exec/intel-classic.mk
+revise the flag for FC, CC, LD for commends macros
+change LIBS := if needed 
+
+After all env.sh and intel-classic.mk get changed, 
+do
+./build_am4_glamm.sh 2>&1 | tee log.compile
+
+
+
 ### Directory Structure
 * `src/`: Source code for GLAMM and AM4 modifications.
     * `atmos_param/aerosol_microphysics/`: Core GLAMM modules.
