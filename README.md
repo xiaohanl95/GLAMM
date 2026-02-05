@@ -49,24 +49,6 @@ The reference configuration utilizes **12 aerosol modes** to capture the full co
 
 *Note: M_all includes sulfate, black carbon, organic, dust, and sea salt.*
 
-## 🚀 Usage
-
-### Requirements
-* **Host Model:** GFDL AM4.0.
-* **Input Data:**
-    * **Anthropogenic Emissions:** CEDS (Community Emissions Data System) for CMIP6.
-    * **Natural Emissions:** Online parameterizations for Sea Salt (Gong, 2003; Jaeglé et al., 2011) and Dust (Kok, 2011).
-
-### Running the Model
-The model can be run in a "double-call" diagnostic configuration (as described in the Part 1 paper). In this setup:
-1.  The standard AM4.0 bulk aerosol scheme remains active for radiative transfer and cloud microphysics.
-2.  GLAMM runs simultaneously as a passive tracer package, undergoing full microphysical processing without feeding back to the climate.
-This allows for direct evaluation of microphysical budgets without perturbing the host model's circulation.
-
-*See `[TODO: Insert Path to Run Scripts]` for example namelists and run scripts.*
-
-
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -104,3 +86,24 @@ TODO
 
 ## Running the model:
 The script c96L33_amip_glamm.sh can be used to run the model. It is currently set up to run with 384 nodes and 1 openmp threads, but the script has guidelines on how to update this.
+
+
+
+## 🚀 Usage
+
+### Requirements
+* **Host Model:** GFDL AM4.0.
+* **Input Data:**
+    * **Anthropogenic Emissions:** CEDS (Community Emissions Data System) for CMIP6.
+    * **Natural Emissions:** Online parameterizations for Sea Salt (Gong, 2003; Jaeglé et al., 2011) and Dust (Kok, 2011).
+
+### Running the Model
+The model can be run in a "double-call" diagnostic configuration (as described in the Part 1 paper). In this setup:
+1.  The standard AM4.0 bulk aerosol scheme remains active for radiative transfer and cloud microphysics.
+2.  GLAMM runs simultaneously as a passive tracer package, undergoing full microphysical processing without feeding back to the climate.
+This allows for direct evaluation of microphysical budgets without perturbing the host model's circulation.
+
+*See `[TODO: Insert Path to Run Scripts]` for example namelists and run scripts.*
+
+
+
