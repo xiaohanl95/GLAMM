@@ -8,7 +8,6 @@ The full description of the model and its evaluation with observational constrai
 >
 >**Authors:** Xiaohan Li, Fabien Paulot, Uriel Ramirez, Susanne E. Bauer, Xiaohong Liu, Paul Ginoux 
 >
-> **Journal:** *Journal of Advances in Modeling Earth Systems (JAMES)*
 
 Please cite this paper if you use GLAMM in your research.
 
