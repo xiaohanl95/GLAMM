@@ -94,7 +94,7 @@ All necessary input data files can be downloaded by
 ```bash
 wget ftp://nomads.gfdl.noaa.gov/users/Ming.Zhao/AM4Documentation/GFDL-AM4.0/inputData/AM4_run.tar.gz
 ```
-
+For specific data input for GLAMM, contact Xiaohan Li (xiaohanl@princeton.edu).
 
 ### Run the Model
 Once the input data is linked and the configuration is established, execute the model using the provided run script ```c96L33_amip_glamm.sh```.
